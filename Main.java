@@ -6,9 +6,15 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
 
-        PepTalk translator = new PepTalk(scanner.next());
+        String finalResult = "";
 
-        translator.processingInput();
+        while (scanner.hasNext()) {
+            PepTalk translator = new PepTalk(scanner.next());
+            translator.processingInput();
+            finalResult += translator.getResult() + " ";
+        }
+
+        System.out.println(finalResult);
 
         scanner.close();
 

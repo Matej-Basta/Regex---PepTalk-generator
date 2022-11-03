@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Main {
 
@@ -9,7 +8,7 @@ public class Main {
 
         PepTalk translator = new PepTalk(scanner.next());
 
-        System.out.println(translator.getResult());
+        translator.processingInput();
 
         scanner.close();
 

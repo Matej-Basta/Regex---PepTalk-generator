@@ -7,16 +7,9 @@ public class Main {
         
         Scanner scanner = new Scanner(System.in);
 
-        while(scanner.hasNext()) {
-            String word = scanner.next();
+        PepTalk translator = new PepTalk(scanner.next());
 
-            Pattern pattern = Pattern.compile("[a,e,i,o,u]");
-            String[] syllables = pattern.split(word);
-
-            for (String syllable : syllables) {
-                System.out.println(syllable);
-            }
-        }
+        System.out.println(translator.getResult());
 
         scanner.close();
 
